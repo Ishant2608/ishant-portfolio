@@ -1,0 +1,19 @@
+{
+  "name": "Ishant Sharma — Full Stack & WordPress Developer",
+  "short_name": "Ishant Sharma",
+  "description": "Full Stack Developer with 4+ years of experience delivering 100+ websites, WordPress solutions, e-commerce stores, and business applications.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#3B5BFF",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
