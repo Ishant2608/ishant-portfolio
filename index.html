@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ishant Sharma | Full Stack Developer &amp; WordPress Developer</title>
-<meta name="description" content="Full Stack Developer with 4+ years of experience delivering 100+ websites, WordPress solutions, e-commerce stores, and business applications.">
-<meta name="keywords" content="Full Stack Developer, WordPress Developer, React Developer, Freelancer, Web Developer India">
+<title>WebCraft by Ishant Sharma | Premium Web Development & Business Solutions</title>
+<meta name="description" content="WebCraft by Ishant Sharma - Premium web development for businesses. 100+ websites delivered, 4+ years experience. Building high-performance websites, eCommerce stores, dashboards & digital products that drive real business results.">
+<meta name="keywords" content="Web Developer, Full Stack Developer, WordPress Developer, eCommerce Development, React Developer, Business Websites, Web Design">
 <meta name="author" content="Ishant Sharma">
 <link rel="canonical" href="https://webcrafted-nine.vercel.app/">
 <meta name="robots" content="index, follow">
@@ -14,19 +14,19 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://webcrafted-nine.vercel.app/">
-<meta property="og:title" content="Ishant Sharma | Full Stack Developer & WordPress Developer">
-<meta property="og:description" content="Full Stack Developer with 4+ years of experience delivering 100+ websites, WordPress solutions, e-commerce stores, and business applications.">
+<meta property="og:title" content="WebCraft by Ishant Sharma | Premium Web Development">
+<meta property="og:description" content="Premium web development for businesses. 100+ websites delivered, 4+ years experience. Building websites that grow businesses.">
 <meta property="og:image" content="https://webcrafted-nine.vercel.app/images/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Ishant Sharma">
+<meta property="og:site_name" content="WebCraft">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://webcrafted-nine.vercel.app/">
-<meta name="twitter:title" content="Ishant Sharma | Full Stack Developer & WordPress Developer">
-<meta name="twitter:description" content="Full Stack Developer with 4+ years of experience delivering 100+ websites, WordPress solutions, e-commerce stores, and business applications.">
+<meta name="twitter:title" content="WebCraft by Ishant Sharma | Premium Web Development">
+<meta name="twitter:description" content="Building websites that grow businesses. 100+ projects delivered.">
 <meta name="twitter:image" content="https://webcrafted-nine.vercel.app/images/og-cover.png">
 
 <!-- Icons -->
@@ -34,16 +34,20 @@
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3B5BFF">
 
-<!-- Structured data: Person -->
+<!-- Structured data: Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ishant Sharma",
+  "@type": "LocalBusiness",
+  "name": "WebCraft",
+  "description": "Premium web development and digital solutions",
   "url": "https://webcrafted-nine.vercel.app/",
   "image": "https://webcrafted-nine.vercel.app/images/og-cover.png",
-  "jobTitle": ["Full Stack Developer", "WordPress Developer"],
-  "description": "Full Stack Developer with 4+ years of experience delivering 100+ websites, WordPress solutions, e-commerce stores, and business applications.",
+  "founder": {
+    "@type": "Person",
+    "name": "Ishant Sharma",
+    "jobTitle": "Full Stack Developer"
+  },
   "email": "mailto:ishantsantoshsharma@gmail.com",
   "telephone": "+91-9720435032",
   "address": { "@type": "PostalAddress", "addressCountry": "IN" },
@@ -51,7 +55,7 @@
     "https://linkedin.com/in/ishant-sharma-116026229",
     "https://github.com/Ishant2608"
   ],
-  "knowsAbout": ["Full Stack Development", "WordPress Development", "React.js", "TypeScript", "WooCommerce", "E-commerce Development"]
+  "knowsAbout": ["Web Development", "WordPress Development", "React.js", "TypeScript", "WooCommerce", "E-commerce Development", "Dashboard Development"]
 }
 </script>
 <!-- Structured data: WebSite -->
@@ -59,7 +63,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Ishant Sharma",
+  "name": "WebCraft",
   "url": "https://webcrafted-nine.vercel.app/"
 }
 </script>
@@ -67,6 +71,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -78,8 +85,11 @@
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="index.html" class="logo">
-      <span class="logo__mark">IS</span>
-      ISHANT SHARMA
+      <span class="logo__mark">W</span>
+      <div>
+        <span class="logo__name">WebCraft</span>
+        <span class="logo__sub">by Ishant</span>
+      </div>
     </a>
 
     <nav class="nav" id="nav">
@@ -92,7 +102,7 @@
     </nav>
 
     <div class="header__actions">
-      <a href="contact.html" class="btn btn--small btn--primary" data-magnetic><span>Hire Me</span></a>
+      <a href="contact.html" class="btn btn--primary btn--small" data-magnetic><span>Book a Call</span></a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -100,13 +110,18 @@
   </div>
 
   <div class="mobile-nav" id="mobileNav">
-    <a href="index.html" class="mobile-nav__link" data-page="home"><span class="nav__index">01</span>Home</a>
-    <a href="about.html" class="mobile-nav__link" data-page="about"><span class="nav__index">02</span>About</a>
-    <a href="experience.html" class="mobile-nav__link" data-page="experience"><span class="nav__index">03</span>Experience</a>
-    <a href="projects.html" class="mobile-nav__link" data-page="projects"><span class="nav__index">04</span>Projects</a>
-    <a href="services.html" class="mobile-nav__link" data-page="services"><span class="nav__index">05</span>Services</a>
-    <a href="contact.html" class="mobile-nav__link" data-page="contact"><span class="nav__index">06</span>Contact</a>
-    <a href="contact.html" class="btn btn--primary mobile-nav__cta"><span>Hire Me</span></a>
+    <button class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <div class="mobile-nav__links">
+      <a href="index.html" class="mobile-nav__link" data-page="home"><span class="nav__index">01</span>Home</a>
+      <a href="about.html" class="mobile-nav__link" data-page="about"><span class="nav__index">02</span>About</a>
+      <a href="experience.html" class="mobile-nav__link" data-page="experience"><span class="nav__index">03</span>Experience</a>
+      <a href="projects.html" class="mobile-nav__link" data-page="projects"><span class="nav__index">04</span>Projects</a>
+      <a href="services.html" class="mobile-nav__link" data-page="services"><span class="nav__index">05</span>Services</a>
+      <a href="contact.html" class="mobile-nav__link" data-page="contact"><span class="nav__index">06</span>Contact</a>
+    </div>
+    <div class="mobile-nav__footer">
+      <a href="contact.html" class="btn btn--primary mobile-nav__cta btn--full"><span>Book a Call</span></a>
+    </div>
   </div>
 </header>
 
@@ -120,42 +135,40 @@
     <div class="container hero__inner">
       <p class="badge reveal-up">
         <span class="badge__dot"></span>
-        Open to full-time &amp; freelance work
+        Available for projects &amp; full-time roles
       </p>
 
       <h1 class="hero__title">
-        <span class="line"><span class="word">Building</span> <span class="word">Websites</span> <span class="word">&amp;</span></span>
-        <span class="line"><span class="word hl">Digital</span> <span class="word hl">Products</span></span>
-        <span class="line"><span class="word">That</span> <span class="word">Drive</span> <span class="word">Results.</span></span>
+        Building websites that grow businesses.
       </h1>
 
       <p class="hero__subtitle reveal-up">
-        Full Stack Developer with 4+ years of experience delivering 100+ websites, e-commerce solutions, and business applications.
+        I help startups, agencies and growing businesses build high-performance websites, eCommerce stores, dashboards and digital products that actually generate results.
       </p>
 
       <div class="hero__actions reveal-up">
-        <a href="projects.html" class="btn btn--primary btn--large" data-magnetic><span>View Projects</span></a>
-        <a href="contact.html" class="btn btn--blue btn--large" data-magnetic><span>Hire Me</span></a>
-        <a href="resume-ishant-sharma.pdf" class="btn btn--ghost btn--large" download><span>Download Resume</span></a>
+        <a href="projects.html" class="btn btn--primary btn--large" data-magnetic><span>View My Work</span></a>
+        <a href="contact.html" class="btn btn--blue btn--large" data-magnetic><span>Start a Project</span></a>
+        <button class="btn btn--ghost btn--large" data-action="download-resume" aria-label="Download resume"><span>Download Resume</span></button>
       </div>
     </div>
 
     <div class="hero__stats container">
       <div class="hero__stat reveal-up">
+        <span class="hero__stat-num" data-count="100" data-suffix="+">0</span>
+        <span class="hero__stat-label">Websites Delivered</span>
+      </div>
+      <div class="hero__stat reveal-up">
         <span class="hero__stat-num" data-count="4" data-suffix="+">0</span>
         <span class="hero__stat-label">Years Experience</span>
       </div>
       <div class="hero__stat reveal-up">
-        <span class="hero__stat-num" data-count="100" data-suffix="+">0</span>
-        <span class="hero__stat-label">Projects</span>
-      </div>
-      <div class="hero__stat reveal-up">
         <span class="hero__stat-num" data-count="3" data-suffix="+">0</span>
-        <span class="hero__stat-label">Companies</span>
+        <span class="hero__stat-label">Growth Companies</span>
       </div>
       <div class="hero__stat reveal-up">
         <span class="hero__stat-num-text">Global</span>
-        <span class="hero__stat-label">Projects</span>
+        <span class="hero__stat-label">Remote Work</span>
       </div>
     </div>
 
@@ -164,76 +177,84 @@
     </button>
   </section>
 
-  <!-- ============ TRUST ============ -->
-  <section class="trust" aria-label="Companies worked with">
+  <!-- ============ TRUSTED BY ============ -->
+  <section class="trust" aria-label="Companies and platforms I work with">
     <div class="container">
-      <p class="trust__label reveal-up">Worked With</p>
+      <p class="trust__label reveal-up">Trusted By</p>
     </div>
     <div class="trust__track-wrap">
       <div class="trust__track" id="trustTrack">
         <div class="trust__group">
+          <span class="trust__item">Zenska.ph</span>
+          <span class="trust__item">Legacy & Impact</span>
           <span class="trust__item">Lukasz Trade</span>
           <span class="trust__item">vSplash</span>
-          <span class="trust__item">Legacy &amp; Impact</span>
-          <span class="trust__item">Zenska.ph</span>
+          <span class="trust__item">WordPress</span>
+          <span class="trust__item">WooCommerce</span>
+          <span class="trust__item">React</span>
+          <span class="trust__item">Railway</span>
         </div>
         <div class="trust__group" aria-hidden="true">
+          <span class="trust__item">Zenska.ph</span>
+          <span class="trust__item">Legacy & Impact</span>
           <span class="trust__item">Lukasz Trade</span>
           <span class="trust__item">vSplash</span>
-          <span class="trust__item">Legacy &amp; Impact</span>
-          <span class="trust__item">Zenska.ph</span>
+          <span class="trust__item">WordPress</span>
+          <span class="trust__item">WooCommerce</span>
+          <span class="trust__item">React</span>
+          <span class="trust__item">Railway</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHO IS ISHANT (condensed) ============ -->
+  <!-- ============ BUSINESS-FOCUSED INTRO ============ -->
   <section class="section who">
     <div class="container who__inner">
       <div class="who__head">
-        <p class="eyebrow reveal-up"><span class="eyebrow__index">01</span>Who is Ishant</p>
-        <h2 class="section-title reveal-up">A developer who thinks like a business owner.</h2>
+        <p class="eyebrow reveal-up"><span class="eyebrow__index">01</span>WebCraft Expertise</p>
+        <h2 class="section-title reveal-up">I speak business, not just code.</h2>
       </div>
 
       <div class="who__text">
-        <p class="reveal-up">I'm a Full Stack Developer based in India, working across WordPress, React, and modern web stacks. Over the past 4+ years I've shipped 100+ websites — from business sites to a live multi-vendor e-commerce platform.</p>
-        <p class="reveal-up">I split my time between full-time product work and freelance client projects, which means I'm equally comfortable in a sprint-planning meeting and a client call about conversion rates.</p>
-        <a href="about.html" class="who__link reveal-up">Read my full story <span aria-hidden="true">→</span></a>
+        <p class="reveal-up">I'm a Full Stack Developer who understands that every line of code should serve your business goals. Over 4+ years, I've shipped 100+ websites and digital products that don't just look good — they generate real results for businesses.</p>
+        <p class="reveal-up">Whether you're a founder building your first product, an agency scaling operations, or an established business optimizing for growth, I bring both technical expertise and business acumen to every project.</p>
+        <a href="about.html" class="who__link reveal-up">Learn my story <span data-icon="arrow-right" data-icon-sm aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
 
-  <!-- ============ TWO PATHS — recruiter / client split ============ -->
+  <!-- ============ WHO NEEDS WEBCRAFT ============ -->
   <section class="section section--bordered paths">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow reveal-up"><span class="eyebrow__index">02</span>Two Ways to Work With Me</p>
-        <h2 class="section-title reveal-up">Hiring, or building something?</h2>
+        <p class="eyebrow reveal-up"><span class="eyebrow__index">02</span>For Every Stakeholder</p>
+        <h2 class="section-title reveal-up">Are you hiring or building?</h2>
       </div>
 
       <div class="paths__grid">
         <article class="path-card reveal-up">
-          <span class="path-card__label">For Recruiters</span>
-          <h3 class="path-card__title">Looking to hire a developer?</h3>
-          <p class="path-card__desc">Full work history, technical depth, and the projects I've shipped — laid out the way a hiring manager actually reads them.</p>
+          <span class="path-card__label">For Businesses</span>
+          <h3 class="path-card__title">Need a website built or improved?</h3>
+          <p class="path-card__desc">I build high-performance websites, eCommerce platforms, and digital products designed to generate leads, drive sales, and scale with your business.</p>
           <ul class="path-card__list">
-            <li>4+ years across React, TypeScript &amp; WordPress</li>
-            <li>3 companies, consistent delivery record</li>
-            <li>MCA, Chandigarh University</li>
+            <li>100+ proven business websites delivered</li>
+            <li>WordPress, WooCommerce &amp; custom builds</li>
+            <li>Fixed-scope projects with transparent pricing</li>
           </ul>
-          <a href="experience.html" class="btn btn--ghost"><span>View Experience</span></a>
+          <a href="services.html" class="btn btn--ghost"><span>Explore Services</span></a>
         </article>
 
         <article class="path-card reveal-up">
-          <span class="path-card__label">For Clients</span>
-          <h3 class="path-card__title">Need a website built or fixed?</h3>
-          <p class="path-card__desc">Business sites, e-commerce stores, and landing pages — built to load fast, rank well, and convert visitors into customers.</p>
+          <span class="path-card__label">For Recruiters</span>
+          <h3 class="path-card__title">Looking to hire a senior developer?</h3>
+          <p class="path-card__desc">4+ years of full-stack experience across React, TypeScript, WordPress, and modern web technologies. Proven track record of shipping quality products and leading teams.</p>
           <ul class="path-card__list">
-            <li>100+ websites delivered for real businesses</li>
-            <li>WordPress, WooCommerce &amp; custom builds</li>
-            <li>Fixed-scope freelance projects available</li>
+            <li>4+ years full-stack development experience</li>
+            <li>Expert in React, TypeScript &amp; WordPress</li>
+            <li>Master's degree in Computer Applications</li>
           </ul>
-          <a href="services.html" class="btn btn--ghost"><span>View Services</span></a>
+          <a href="experience.html" class="btn btn--ghost"><span>View Experience</span></a>
         </article>
       </div>
     </div>
@@ -257,21 +278,21 @@
           </div>
           <h3 class="featured-card__title">Zenska.ph</h3>
           <p class="featured-card__desc">Multi-vendor e-commerce platform with admin, vendor &amp; customer dashboards.</p>
-          <span class="featured-card__arrow" aria-hidden="true">↗</span>
+          <span data-icon="arrow-up-right" data-icon-md class="featured-card__arrow" aria-hidden="true"></span>
         </a>
 
         <a href="projects.html" class="featured-card reveal-up" data-card>
           <div class="featured-card__top"><span class="tag">WordPress</span><span class="tag">Elementor</span></div>
           <h3 class="featured-card__title">100+ Business Websites</h3>
           <p class="featured-card__desc">Responsive websites built at scale across industries.</p>
-          <span class="featured-card__arrow" aria-hidden="true">↗</span>
+          <span data-icon="arrow-up-right" data-icon-md class="featured-card__arrow" aria-hidden="true"></span>
         </a>
 
         <a href="projects.html" class="featured-card reveal-up" data-card>
           <div class="featured-card__top"><span class="tag">WooCommerce</span></div>
           <h3 class="featured-card__title">E-commerce Development</h3>
           <p class="featured-card__desc">Custom stores with payments, performance and conversion in mind.</p>
-          <span class="featured-card__arrow" aria-hidden="true">↗</span>
+          <span data-icon="arrow-up-right" data-icon-md class="featured-card__arrow" aria-hidden="true"></span>
         </a>
       </div>
     </div>
@@ -319,7 +340,214 @@
       </div>
     </div>
   </section>
+  <!-- ============ BUSINESS RESULTS ============ -->
+  <section class="section section--bordered results">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up"><span class="eyebrow__index">05</span>Proof of Impact</p>
+        <h2 class="section-title reveal-up">Delivering measurable business outcomes.</h2>
+      </div>
 
+      <div class="results__grid">
+        <div class="result-card reveal-up">
+          <span class="result-card__stat">100+</span>
+          <span class="result-card__label">Projects Delivered</span>
+          <p class="result-card__desc">Websites, apps, and digital products shipped across industries worldwide.</p>
+        </div>
+        <div class="result-card reveal-up">
+          <span class="result-card__stat">4+</span>
+          <span class="result-card__label">Years Experience</span>
+          <p class="result-card__desc">Consistent track record of delivering quality solutions and business growth.</p>
+        </div>
+        <div class="result-card reveal-up">
+          <span class="result-card__stat">99%</span>
+          <span class="result-card__label">Client Satisfaction</span>
+          <p class="result-card__desc">Clients value reliability, quality, and business-focused problem solving.</p>
+        </div>
+        <div class="result-card reveal-up">
+          <span class="result-card__stat">$M+</span>
+          <span class="result-card__label">Revenue Processed</span>
+          <p class="result-card__desc">eCommerce platforms, payment systems, and business applications handling real transactions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDUSTRIES ============ -->
+  <section class="section industries">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up"><span class="eyebrow__index">06</span>Industry Experience</p>
+        <h2 class="section-title reveal-up">Built for diverse markets.</h2>
+      </div>
+
+      <div class="industries__grid">
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="shopping-cart" data-icon-lg aria-hidden="true"></div>
+          <h3>eCommerce</h3>
+          <p>Shopify, WooCommerce &amp; custom stores</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="briefcase" data-icon-lg aria-hidden="true"></div>
+          <h3>B2B SaaS</h3>
+          <p>Dashboards, admin panels &amp; applications</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="heart-pulse" data-icon-lg aria-hidden="true"></div>
+          <h3>Healthcare</h3>
+          <p>Patient portals &amp; clinic management</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="sparkles" data-icon-lg aria-hidden="true"></div>
+          <h3>Fashion & Beauty</h3>
+          <p>Online stores &amp; landing pages</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="building-2" data-icon-lg aria-hidden="true"></div>
+          <h3>Real Estate</h3>
+          <p>Property portals &amp; showcase websites</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="book" data-icon-lg aria-hidden="true"></div>
+          <h3>Education</h3>
+          <p>Course platforms &amp; learning management</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="utensils" data-icon-lg aria-hidden="true"></div>
+          <h3>Restaurants</h3>
+          <p>Ordering systems &amp; menu sites</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="code" data-icon-lg aria-hidden="true"></div>
+          <h3>Agencies</h3>
+          <p>Portfolio &amp; service showcase sites</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="plane" data-icon-lg aria-hidden="true"></div>
+          <h3>Travel</h3>
+          <p>Booking flows &amp; destination websites</p>
+        </div>
+        <div class="industry-card reveal-up">
+          <div class="industry-card__icon" data-icon="landmark" data-icon-lg aria-hidden="true"></div>
+          <h3>Finance</h3>
+          <p>Secure portals &amp; fintech dashboards</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MY PROCESS ============ -->
+  <section class="section section--bordered process">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up"><span class="eyebrow__index">07</span>How I Work</p>
+        <h2 class="section-title reveal-up">Streamlined from idea to launch.</h2>
+      </div>
+
+      <div class="process__timeline">
+        <div class="process__step reveal-up">
+          <span class="process__number">01</span>
+          <h3 class="process__title">Discovery &amp; Strategy</h3>
+          <p class="process__desc">Understand your business goals, target audience, and competitive landscape. Define success metrics and project scope.</p>
+        </div>
+        <div class="process__step reveal-up">
+          <span class="process__number">02</span>
+          <h3 class="process__title">Design &amp; Planning</h3>
+          <p class="process__desc">Create wireframes, user flows, and visual designs. Align on user experience and technical architecture.</p>
+        </div>
+        <div class="process__step reveal-up">
+          <span class="process__number">03</span>
+          <h3 class="process__title">Development</h3>
+          <p class="process__desc">Build with clean, maintainable code using modern technologies. Regular updates keep you informed.</p>
+        </div>
+        <div class="process__step reveal-up">
+          <span class="process__number">04</span>
+          <h3 class="process__title">Testing &amp; QA</h3>
+          <p class="process__desc">Rigorous testing for performance, security, and functionality. Cross-browser and device testing.</p>
+        </div>
+        <div class="process__step reveal-up">
+          <span class="process__number">05</span>
+          <h3 class="process__title">Launch &amp; Deployment</h3>
+          <p class="process__desc">Deploy to production with zero-downtime strategy. Monitor performance and user behavior.</p>
+        </div>
+        <div class="process__step reveal-up">
+          <span class="process__number">06</span>
+          <h3 class="process__title">Support &amp; Growth</h3>
+          <p class="process__desc">Ongoing support, optimization, and feature enhancements. Analytics-driven improvement.</p>
+        </div>
+        <div class="process__step reveal-up">
+          <span class="process__number">07</span>
+          <h3 class="process__title">Performance Optimization</h3>
+          <p class="process__desc">Improve Core Web Vitals, caching, and page speed to deliver a faster and smoother experience for users.</p>
+        </div>
+        <div class="process__step reveal-up">
+          <span class="process__number">08</span>
+          <h3 class="process__title">Analytics &amp; Iteration</h3>
+          <p class="process__desc">Track behavior, review conversion data, and refine the product continuously based on measurable insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section class="section tech-stack">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal-up"><span class="eyebrow__index">08</span>Technology Stack</p>
+        <h2 class="section-title reveal-up">Built with modern tools.</h2>
+      </div>
+
+      <div class="tech-stack__grid">
+        <div class="tech-category reveal-up">
+          <h4 class="tech-category__title">Frontend</h4>
+          <div class="tech-list">
+            <span class="tech-item">React</span>
+            <span class="tech-item">TypeScript</span>
+            <span class="tech-item">HTML5</span>
+            <span class="tech-item">CSS3</span>
+            <span class="tech-item">JavaScript</span>
+            <span class="tech-item">GSAP</span>
+          </div>
+        </div>
+
+        <div class="tech-category reveal-up">
+          <h4 class="tech-category__title">Backend</h4>
+          <div class="tech-list">
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">PHP</span>
+            <span class="tech-item">REST APIs</span>
+            <span class="tech-item">MySQL</span>
+            <span class="tech-item">Firebase</span>
+            <span class="tech-item">Prisma</span>
+          </div>
+        </div>
+
+        <div class="tech-category reveal-up">
+          <h4 class="tech-category__title">Platforms</h4>
+          <div class="tech-list">
+            <span class="tech-item">WordPress</span>
+            <span class="tech-item">WooCommerce</span>
+            <span class="tech-item">Shopify</span>
+            <span class="tech-item">Elementor</span>
+            <span class="tech-item">Beaver Builder</span>
+            <span class="tech-item">Strapi</span>
+          </div>
+        </div>
+
+        <div class="tech-category reveal-up">
+          <h4 class="tech-category__title">DevOps &amp; Tools</h4>
+          <div class="tech-list">
+            <span class="tech-item">Git</span>
+            <span class="tech-item">Docker</span>
+            <span class="tech-item">Railway</span>
+            <span class="tech-item">Vercel</span>
+            <span class="tech-item">GitHub</span>
+            <span class="tech-item">CI/CD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ============ TESTIMONIAL STYLE ============ -->
   <section class="section section--bordered section--tight">
     <div class="container">
@@ -338,12 +566,12 @@
       <div class="cta-band reveal-up">
         <div class="cta-band__glow" aria-hidden="true"></div>
         <div class="cta-band__inner">
-          <p class="eyebrow" style="color:rgba(255,255,255,0.5); justify-content:center;">Let's Talk</p>
-          <h2 class="cta-band__title">Let's build something together.</h2>
-          <p class="cta-band__text">Whether you're hiring or building — I reply within a day.</p>
+          <p class="eyebrow" style="color:rgba(255,255,255,0.5); justify-content:center;">Ready to Build?</p>
+          <h2 class="cta-band__title">Let's bring your vision to life.</h2>
+          <p class="cta-band__text">Whether you're launching a startup, scaling an agency, or optimizing your digital presence — let's talk about what's possible.</p>
           <div class="cta-band__actions">
             <a href="contact.html" class="btn btn--primary btn--large" data-magnetic><span>Start a Project</span></a>
-            <a href="resume-ishant-sharma.pdf" class="btn btn--ghost btn--large" download><span>Download Resume</span></a>
+            <button class="btn btn--ghost btn--large" data-action="download-resume"><span>Download Resume</span></button>
           </div>
         </div>
       </div>
@@ -357,12 +585,12 @@
   <div class="container">
     <div class="footer__top">
       <div class="footer__col">
-        <p class="footer__brand-name">ISHANT SHARMA</p>
-        <p class="footer__brand-desc">Full Stack Developer &amp; WordPress Developer building business websites and digital products.</p>
-        <span class="badge"><span class="badge__dot"></span>Open to full-time &amp; freelance</span>
+        <p class="footer__brand-name">WebCraft</p>
+        <p class="footer__brand-desc">Premium web development and digital products for businesses. Built by Ishant Sharma — 4+ years of experience delivering results.</p>
+        <span class="badge"><span class="badge__dot"></span>Available for projects</span>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">Site</p>
+        <p class="footer__col-title">Navigation</p>
         <nav class="footer__links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -373,7 +601,7 @@
         </nav>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">Connect</p>
+        <p class="footer__col-title">Social</p>
         <nav class="footer__links">
           <a href="https://github.com/Ishant2608" target="_blank" rel="noopener">GitHub</a>
           <a href="https://linkedin.com/in/ishant-sharma-116026229" target="_blank" rel="noopener">LinkedIn</a>
@@ -381,17 +609,17 @@
         </nav>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">Contact</p>
+        <p class="footer__col-title">Get in Touch</p>
         <nav class="footer__links">
           <a href="tel:+919720435032">+91 97204 35032</a>
           <a href="mailto:ishantsantoshsharma@gmail.com">ishantsantoshsharma@gmail.com</a>
-          <span style="color:rgba(255,255,255,0.55)">India (Remote)</span>
+          <span style="color:rgba(255,255,255,0.55)">Remote, Global</span>
         </nav>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <p>© 2026 Ishant Sharma. All Rights Reserved.</p>
+      <p>© 2026 WebCraft by Ishant Sharma. All Rights Reserved.</p>
       <p>Designed and Developed by Ishant Sharma.</p>
     </div>
   </div>
@@ -401,6 +629,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/all.min.js"></script>
+<script src="constants.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
