@@ -51,6 +51,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="about">
@@ -83,13 +86,18 @@
   </div>
 
   <div class="mobile-nav" id="mobileNav">
-    <a href="index.html" class="mobile-nav__link" data-page="home"><span class="nav__index">01</span>Home</a>
-    <a href="about.html" class="mobile-nav__link" data-page="about"><span class="nav__index">02</span>About</a>
-    <a href="experience.html" class="mobile-nav__link" data-page="experience"><span class="nav__index">03</span>Experience</a>
-    <a href="projects.html" class="mobile-nav__link" data-page="projects"><span class="nav__index">04</span>Projects</a>
-    <a href="services.html" class="mobile-nav__link" data-page="services"><span class="nav__index">05</span>Services</a>
-    <a href="contact.html" class="mobile-nav__link" data-page="contact"><span class="nav__index">06</span>Contact</a>
-    <a href="contact.html" class="btn btn--primary mobile-nav__cta"><span>Hire Me</span></a>
+    <button class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <div class="mobile-nav__links">
+      <a href="index.html" class="mobile-nav__link" data-page="home"><span class="nav__index">01</span>Home</a>
+      <a href="about.html" class="mobile-nav__link" data-page="about"><span class="nav__index">02</span>About</a>
+      <a href="experience.html" class="mobile-nav__link" data-page="experience"><span class="nav__index">03</span>Experience</a>
+      <a href="projects.html" class="mobile-nav__link" data-page="projects"><span class="nav__index">04</span>Projects</a>
+      <a href="services.html" class="mobile-nav__link" data-page="services"><span class="nav__index">05</span>Services</a>
+      <a href="contact.html" class="mobile-nav__link" data-page="contact"><span class="nav__index">06</span>Contact</a>
+    </div>
+    <div class="mobile-nav__footer">
+      <a href="contact.html" class="btn btn--primary mobile-nav__cta btn--full"><span>Book a Call</span></a>
+    </div>
   </div>
 </header>
 
@@ -235,12 +243,12 @@
   <div class="container">
     <div class="footer__top">
       <div class="footer__col">
-        <p class="footer__brand-name">ISHANT SHARMA</p>
-        <p class="footer__brand-desc">Full Stack Developer &amp; WordPress Developer building business websites and digital products.</p>
-        <span class="badge"><span class="badge__dot"></span>Open to full-time &amp; freelance</span>
+        <p class="footer__brand-name">WebCraft</p>
+        <p class="footer__brand-desc">Premium web development and digital products for businesses. Built by Ishant Sharma — 4+ years of experience delivering results.</p>
+        <span class="badge"><span class="badge__dot"></span>Available for projects</span>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">Site</p>
+        <p class="footer__col-title">Navigation</p>
         <nav class="footer__links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -251,7 +259,7 @@
         </nav>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">Connect</p>
+        <p class="footer__col-title">Social</p>
         <nav class="footer__links">
           <a href="https://github.com/Ishant2608" target="_blank" rel="noopener">GitHub</a>
           <a href="https://linkedin.com/in/ishant-sharma-116026229" target="_blank" rel="noopener">LinkedIn</a>
@@ -259,16 +267,16 @@
         </nav>
       </div>
       <div class="footer__col">
-        <p class="footer__col-title">Contact</p>
+        <p class="footer__col-title">Get in Touch</p>
         <nav class="footer__links">
           <a href="tel:+919720435032">+91 97204 35032</a>
           <a href="mailto:ishantsantoshsharma@gmail.com">ishantsantoshsharma@gmail.com</a>
-          <span style="color:rgba(255,255,255,0.55)">India (Remote)</span>
+          <span style="color:rgba(255,255,255,0.55)">Remote, Global</span>
         </nav>
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 Ishant Sharma. All Rights Reserved.</p>
+      <p>© 2026 WebCraft by Ishant Sharma. All Rights Reserved.</p>
       <p>Designed and Developed by Ishant Sharma.</p>
     </div>
   </div>
@@ -278,6 +286,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/all.min.js"></script>
+<script src="constants.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

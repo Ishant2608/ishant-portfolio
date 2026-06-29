@@ -81,6 +81,7 @@ window.SITE = (function () {
   function initMobileNav() {
     const menuToggle = document.getElementById("menuToggle");
     const mobileNav = document.getElementById("mobileNav");
+    const mobileNavClose = document.getElementById("mobileNavClose");
     if (!menuToggle || !mobileNav) return;
 
     function close() {
@@ -96,6 +97,11 @@ window.SITE = (function () {
       menuToggle.setAttribute("aria-expanded", String(isOpen));
       document.body.style.overflow = isOpen ? "hidden" : "";
     });
+
+    // Close button listener
+    if (mobileNavClose) {
+      mobileNavClose.addEventListener("click", close);
+    }
 
     mobileNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", close);
@@ -162,7 +168,125 @@ window.SITE = (function () {
   }
 
   /* ----------------------------------------------------------
-     INIT â€” shared across every page
+     FONT AWESOME ICONS - render all data-icon elements
+  ---------------------------------------------------------- */
+  function initSiteIcons() {
+    const iconMap = {
+      "arrow-right": "fa-arrow-right",
+      "arrow-up-right": "fa-arrow-up-right-from-square",
+      "shopping-cart": "fa-cart-shopping",
+      "briefcase": "fa-briefcase",
+      "heart-pulse": "fa-heart-pulse",
+      "sparkles": "fa-wand-magic-sparkles",
+      "building-2": "fa-building",
+      "book": "fa-book-open",
+      "utensils": "fa-utensils",
+      "code": "fa-code",
+      "globe": "fa-globe",
+      "shopping-bag": "fa-bag-shopping",
+      "zap": "fa-bolt",
+      "activity": "fa-chart-line",
+      "wrench": "fa-wrench",
+      "plane": "fa-plane",
+      "landmark": "fa-landmark"
+    };
+
+    document.querySelectorAll("[data-icon]").forEach((el) => {
+      const name = el.getAttribute("data-icon");
+      const faName = iconMap[name] || "fa-circle";
+      el.innerHTML = '<i class="fa-solid ' + faName + '" aria-hidden="true"></i>';
+    });
+  }
+
+  /* ----------------------------------------------------------
+     RESUME VIEWER & DOWNLOADER
+  ---------------------------------------------------------- */
+  function initResumeViewer() {
+    const resumeUrl = window.CONSTANTS?.RESUME_URL || "/img/resume/ishant-resume.jpg";
+    
+    // Find all resume action elements
+    const resumeLinks = document.querySelectorAll("[data-action='view-resume'], [data-action='download-resume']");
+    
+    resumeLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const action = link.getAttribute("data-action");
+        if (action === "view-resume") {
+          openResumeViewer(resumeUrl);
+        } else if (action === "download-resume") {
+          downloadResume(resumeUrl);
+        }
+      });
+    });
+  }
+
+  function openResumeViewer(resumeUrl) {
+    let modal = document.getElementById("resumeViewerModal");
+    
+    if (!modal) {
+      modal = document.createElement("div");
+      modal.id = "resumeViewerModal";
+      modal.className = "resume-viewer-modal";
+      modal.innerHTML = [
+        '<div class="resume-viewer-modal__overlay"></div>',
+        '<div class="resume-viewer-modal__content">',
+        '  <div class="resume-viewer-modal__header">',
+        '    <h2>My Resume</h2>',
+        '    <button class="resume-viewer-modal__close" aria-label="Close resume viewer">×</button>',
+        '  </div>',
+        '  <div class="resume-viewer-modal__body">',
+        '    <img id="resumeViewerImage" class="resume-viewer-modal__image" alt="Ishant Sharma Resume" loading="lazy">',
+        '  </div>',
+        '  <div class="resume-viewer-modal__footer">',
+        '    <a id="resumeDownloadBtn" class="btn btn--primary" download>',
+        '      <span>Download Resume</span>',
+        '    </a>',
+        '    <button class="resume-viewer-modal__close-btn btn btn--ghost">Close</button>',
+        '  </div>',
+        '</div>'
+      ].join("\n");
+      document.body.appendChild(modal);
+    }
+
+    const img = modal.querySelector("#resumeViewerImage");
+    const downloadBtn = modal.querySelector("#resumeDownloadBtn");
+    const closeBtn = modal.querySelector(".resume-viewer-modal__close");
+    const closeBtnFooter = modal.querySelector(".resume-viewer-modal__close-btn");
+    const overlay = modal.querySelector(".resume-viewer-modal__overlay");
+
+    img.src = resumeUrl;
+    downloadBtn.href = resumeUrl;
+    
+    modal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+
+    const close = () => {
+      modal.classList.remove("is-open");
+      document.body.style.overflow = "";
+    };
+
+    closeBtn.addEventListener("click", close);
+    closeBtnFooter.addEventListener("click", close);
+    overlay.addEventListener("click", close);
+    
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        close();
+      }
+    }, { once: true });
+  }
+
+  function downloadResume(resumeUrl) {
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = true;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  /* ----------------------------------------------------------
+     INIT – shared across every page
   ---------------------------------------------------------- */
   function init() {
     initLenis();
@@ -171,6 +295,8 @@ window.SITE = (function () {
     initAnchorScroll();
     initActiveNav();
     initMagneticButtons();
+    initSiteIcons();
+    initResumeViewer();
 
     if (gsapAvailable && window.ScrollTrigger) {
       window.addEventListener("load", () => ScrollTrigger.refresh());
@@ -184,6 +310,13 @@ window.SITE = (function () {
     get lenis() { return lenis; },
     get gsapAvailable() { return gsapAvailable; },
     get prefersReducedMotion() { return prefersReducedMotion; },
+    refreshIcons: initSiteIcons,
+    openResumeViewer: function() { 
+      openResumeViewer(window.CONSTANTS?.RESUME_URL || "/img/resume/ishant-resume.jpg"); 
+    },
+    downloadResume: function() { 
+      downloadResume(window.CONSTANTS?.RESUME_URL || "/img/resume/ishant-resume.jpg"); 
+    }
   };
 })();
 /* ============================================================
@@ -540,4 +673,78 @@ window.SITE = (function () {
       }
     });
   });
+})();
+
+/* ============================================================
+   SCROLL CUE â€" Make the scroll indicator button clickable
+   Scrolls to the next section below the hero
+   ============================================================ */
+(function () {
+  "use strict";
+  const scrollCue = document.getElementById("scrollCue");
+  if (!scrollCue) return;
+
+  scrollCue.addEventListener("click", () => {
+    const hero = document.querySelector(".hero");
+    if (!hero) return;
+    const nextSection = hero.nextElementSibling;
+    if (!nextSection) return;
+
+    if (window.SITE && window.SITE.lenis) {
+      window.SITE.lenis.scrollTo(nextSection, { offset: -16, duration: 1.2 });
+    } else {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+})();
+
+/* ============================================================
+   WHATSAPP INTEGRATION — Convert all phone number links to WhatsApp
+   Finds all [data-whatsapp] elements and phone links, converts them
+   to WhatsApp links with pre-filled message
+   ============================================================ */
+(function () {
+  "use strict";
+
+  if (!window.CONSTANTS || !window.CONSTANTS.CONTACT) return;
+
+  const WHATSAPP_LINK = window.CONSTANTS.CONTACT.whatsappMessage;
+  const PHONE_TEXT = window.CONSTANTS.CONTACT.phone;
+
+  // Convert all [data-whatsapp] elements to WhatsApp links
+  document.querySelectorAll("[data-whatsapp]").forEach((el) => {
+    el.href = WHATSAPP_LINK;
+    el.target = "_blank";
+    el.rel = "noopener noreferrer";
+    el.classList.add("whatsapp-link");
+  });
+
+  // Replace all tel: phone links with WhatsApp
+  document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+    const text = link.textContent.trim();
+    // Check if this is our phone number
+    if (text.includes("97204") || text.includes("9720435032")) {
+      link.href = WHATSAPP_LINK;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.classList.add("whatsapp-link");
+    }
+  });
+
+  // Add WhatsApp icon to phone number links
+  document.querySelectorAll(".whatsapp-link").forEach((link) => {
+    // Check if it doesn't already have an icon
+    if (!link.querySelector("[data-lucide='message-circle']")) {
+      const iconSpan = document.createElement("span");
+      iconSpan.className = "whatsapp-icon";
+      iconSpan.setAttribute("data-lucide", "message-circle");
+      iconSpan.setAttribute("aria-hidden", "true");
+      link.insertAdjacentElement("beforeend", iconSpan);
+    }
+  });
+
+  // Refresh Lucide icons after adding them
+  if (window.lucide && typeof window.lucide.createIcons === "function") {
+    window.lucide.createIcons();
+  }
 })();
